@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Git常用命令, Python AI Hadoop Hbase MapReduce">
+    <meta name="keywords" content="多尺度深度特征学习网络 (MDFN), Python AI Hadoop Hbase MapReduce">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Git常用命令 | 啵啵</title>
+    <title>多尺度深度特征学习网络 (MDFN) | 啵啵</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/shage-sg/CDN/themes/source/libs/awesome/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/shage-sg/CDN/themes/source/libs/materialize/materialize.min.css">
@@ -219,12 +219,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/shage-sg/cloudimg@master/source/git.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/shage-sg/cloudimg@master/source/MDFN1.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Git常用命令</h1>
+                    <h1 class="description center-align post-title">多尺度深度特征学习网络 (MDFN)</h1>
                 </div>
             </div>
         </div>
@@ -345,8 +345,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
-                                <span class="chip bg-color">Git常用命令</span>
+                            <a href="/tags/MDFN/">
+                                <span class="chip bg-color">MDFN</span>
                             </a>
                         
                     </div>
@@ -357,8 +357,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Git/" class="post-category">
-                                Git
+                            <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                深度学习
                             </a>
                         
                     </div>
@@ -370,28 +370,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-02-24
+                    2022-11-09
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-02-24
+                    2022-11-09
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    296
+                    1.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    5 分
                 </div>
                 
 
@@ -414,79 +414,25 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4><span id="文件添加操作">文件添加操作</span></h4><pre class="line-numbers language-none"><code class="language-none"># 1. 工作区中创建新文件hello.py
-    $ vi hello.py
-
-# 2. 查看文件状态
-    $ git status
-
-# 3. 将源码拷贝到暂存区
-    $ git add hello.py
-
-# 4. 将暂存区移动到当前分支
-    $ git commit -m "创建新文件hello.py"
-
-# 5. 查看状态
-    $ git status
-    On branch master
-    nothing to commit, working tree clean
-
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4><span id="文件删除操作">文件删除操作</span></h4><pre class="line-numbers language-none"><code class="language-none"># 1. 删除工作区中的文件
-    rm hello.py 
-    
-# 2. 删除暂存区中的文件
-    git rm hello.py
-
-# 3. 删除当前分支中的文件
-    git commit -m '描述信息'
-
-
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4><span id="文件修改操作">文件修改操作</span></h4><pre class="line-numbers language-none"><code class="language-none"># 修改文件
-    $ vi hello.py
-
-# 查看状态
-    $ git status
-
-# 添加暂存区
-    $ git add hello.py
-    
-# 添加版本库
-    $ git commit -m '描述信息'
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h4><span id="文件撤销操作">文件撤销操作</span></h4><pre class="line-numbers language-none"><code class="language-none"># 查看工作区和版本库里面最新版本的区别
-    $ git diff HEAD -- hello.py
-    
-方式1：可以撤销未被追踪的文件
-    
-# 丢弃工作区的修改
-    $ git checkout -- hello.py
-    
-方式2：可以撤销到任意版本
-    # 查看操作日志
-    $ git log
-    commit c4e993ddb36d77710dad2c7c8c18130f9a761946 (HEAD -&gt; master)
-
-    $ git log --oneline
-    c4e993d (HEAD -&gt; master) first add
-    
-    # 回退到某个版本1
-    $ git reset c4e993ddb36d77710dad2c7c8c18130f9a761946
-    
-    # 回退到某个版本2
-    $ git reset --hard c4e993ddb36d77710dad2c7c8c18130f9a761946
-
-
-    #回退到上一个版本
-    git reset HEAD
-    
-    
-    
-
-
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+                <h1><span id="多尺度深度特征学习网络-mdfn">多尺度深度特征学习网络 (MDFN)</span></h1><p>​    多尺度学习才是目标检测的精髓：**浅层和深层的特征对于目标识别和定位起着必不可少的作用。为了有效地利用检测到的特征信息，应考虑另一约束条件，以防止特征被改变或覆盖 **</p>
+<p>​    新框架提出了一种创新的目标检测器，它利用在高级层中学习到的深层特征。与较早层产生的特征相比，深层特征更擅长表达语义和上下文信息。所提出的深度特征学习方案将重点从具有细节的具体特征转移到具有语义信息的抽象特征。它通过构建<strong>多尺度深度特征学习网络 (MDFN)</strong> 不仅考虑单个目标和局部上下文，还考虑它们之间的关系。MDFN通过将信息平方和立方初始模块引入高层来有效地检测目标，它采用参数共享来提高计算效率。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/shage-sg/cloudimg@master/source/MDFN2.png" alt="MDFN网络架构"></p>
+<p>​    MDFN通过集成多边界框、多尺度和多层次技术提供多尺度目标检测器。尽管MDFN采用了一个具有相对较小基础网络（VGG-16）的简单框架，但与具有更深或极宽的宏观层次结构的具有更强特征提取能力的那些相比，它获得了更好或具有竞争力的检测结果。所提出的技术在KITTI、PASCAL VOC和COCO数据集上进行了广泛的评估，在KITTI上取得了最佳结果，在PASCAL VOC和COCO上取得了领先的性能。这项研究表明，<strong>深层特征</strong>提供了突出的语义信息和各种上下文内容，这<strong>有助于其在检测小目标或被遮挡目标方面的卓越性能</strong>。此外，MDFN 模型计算效率高，在精度和速度之间取得了很好的平衡。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/shage-sg/cloudimg@master/source/MDFN1.png" alt="MDFN多尺度模块"></p>
+<p>​    深度特征学习初始模块捕获来自基础网络的直接输出。新框架的基本初始模块通过激活多尺度感受野来充分利用深度特征图。在每个模块中，通过1×1过滤直接利用来自前一层的输出特征信息。然后进行3×3、5×5和7×7过滤以激活特征图上的各种感受野，从而在相应的输入图像上捕获不同范围的场景。 研究者在实践中仅使用1×1和3×3滤波器实现多尺度滤波，以尽量减少参数数量。为高层构建了两种类型的幂运算初始模块：一种是信息方初始模块，另一种是信息立方初始模块，如上图所示。通过为不同的过滤器分配权重来构建这两个模块：在以下等式中给出：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/shage-sg/cloudimg@master/source/MDFN3.png" alt="MDFN模块公式表达方式一"></p>
+<p>上表达式实际上可以分别通过以下信息平方和三次运算来近似：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/shage-sg/cloudimg@master/source/MDFN4.png" alt="MDFN模块公式表达方式二"></p>
+<h2><span id="权重共享parameter-sharing">权重共享(<strong>Parameter Sharing)</strong></span></h2><p>​    通过共享参数，可以有效地实现所提出的信息平方和立方初始模块。例如，通过从5×5单元的第一个3×3过滤器中提取输出并将其与3×3过滤单元的并行输出连接起来，在3×3和5×5过滤单元之间共享参数。然后，3×3过滤操作的输出通道数量隐式加倍，而过滤器集仅使用一次，如上图(b)中的红色箭头所示。这种参数共享可以进一步用于cubic inception模块，如上图(c)所示。3×3滤波操作的输出分别来自3×3、5×5和7×7滤波单元，如上图(c)中三个红色箭头所示。同样，5×5滤波操作的输出分别来自5×5和7×7滤波单元，如两个绿色箭头所示。</p>
+<h2><span id="多尺度目标检测模块multi-scale-object-detection-scheme">多尺度目标检测模块(Multi-Scale object detection scheme)</span></h2><p>​    在新框架模型中，给每个给定位置k个边界框，计算c类分数和每个边界框四个顶点相对于默认边界框的四个偏移量。最终，为特征图内的每个位置提供了总共k（c + 4）个过滤器。因此，每个尺寸为m×n的特征图的输出数量应为k（c + 4）mn。已证实，使用各种默认的框形状将有助于为单发网络预测框的任务，从而提高了目标定位和分类的准确性。 研究者采用这种多边界框技术作为多尺度方案的第一个属性。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/shage-sg/cloudimg@master/source/MDFN2.png" alt="MDFN网络架构"></p>
+<p>​    深度特征学习起始模块被应用在四个连续的高级层单元中。这四个层单元将其输出深度特征直接传输到最终预测层，这将信息传输完全缩短。 </p>
+<p>​    从训练的角度来看，这些缩短的连接使网络的输入和输出彼此更接近，这有益于模型的训练。高级层和最终预测层之间的直接连接缓解了梯度消失的问题，并增强了特征传播。另一方面，四个高级层单元的序列通过语义和上下文信息获取两种方式最大化了深度特征提取和表示的能力。首先，它使后三个高层从先前的较低层获取上下文信息。其次，同一级别的层可以提供不同范围的上下文信息，以及可以在当前层输出中自然构建的更精确的语义表达。这个过程是多尺度方案的第二个特性。</p>
+<p>​    研究者使用多尺度过滤器来激活各种大小的感受野，以增强语义和上下文信息的提取。要注意的另一个方面是要素图的大小。在大多数网络中，特征图的大小会随着深度的增加而逐渐减小。这考虑到系统的内存有限以及功能的比例不变。因此，由于其输入特征图的分辨率比在较早的层中产生的分辨率小得多，因此在网络深处接受的多尺度滤波器将具有较少的计算负担。这抵消了滤波操作增加带来的计算负担。这是拟议的多尺度方案的第三个特性。</p>
+<h2><span id="模块layer-structure-of-deep-inception-module">模块(Layer structure of deep inception module)</span></h2><p><img src="https://cdn.jsdelivr.net/gh/shage-sg/cloudimg@master/source/MDFN5.png" alt="MDFN模块具体结构"></p>
+<p>提出了两种深度特征学习网络体系结构，分别成为<strong>MDFN-I1</strong>和<strong>MDFN-I2</strong>. 它们都具有四个high-level deep feature Inception单元。</p>
+<h2><span id="实验及可视化">实验及可视化</span></h2><p><img src="https://cdn.jsdelivr.net/gh/shage-sg/cloudimg@master/source/MDFN6.png" alt="Average precision(%) on KITTI validation set(1)"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/shage-sg/cloudimg@master/source/MDFN7.png" alt="Average precision(%) on KITTI validation set(2)"></p>
 
                 
             </div>
@@ -513,7 +459,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://www.bulingling.top/posts/caff8000.html">https://www.bulingling.top/posts/caff8000.html</a>
+                    <a href="https://www.bulingling.top/posts/70762292.html">https://www.bulingling.top/posts/70762292.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -551,8 +497,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
-                                    <span class="chip bg-color">Git常用命令</span>
+                                <a href="/tags/MDFN/">
+                                    <span class="chip bg-color">MDFN</span>
                                 </a>
                             
                         </div>
@@ -724,45 +670,47 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/3669e061.html">
+                <a href="/posts/70762292.html">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/shage-sg/cloudimg@master/source/git.png" class="responsive-img" alt="分支管理">
+                        <img src="https://cdn.jsdelivr.net/gh/shage-sg/cloudimg@master/source/MDFN1.png" class="responsive-img" alt="多尺度深度特征学习网络 (MDFN)">
                         
-                        <span class="card-title">分支管理</span>
+                        <span class="card-title">多尺度深度特征学习网络 (MDFN)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Git分支管理
+                            多尺度深度特征学习网络 (MDFN)
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-02-24
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-09
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Git/" class="post-category">
-                                    Git
+                            <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    深度学习
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Git%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86/">
-                        <span class="chip bg-color">Git分支管理</span>
+                    <a href="/tags/MDFN/">
+                        <span class="chip bg-color">MDFN</span>
                     </a>
                     
                 </div>
@@ -776,30 +724,31 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/3ca287b3.html">
+                <a href="/posts/1ad96f88.html">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/shage-sg/cloudimg@master/source/git.png" class="responsive-img" alt="创建版本库">
                         
-                        <span class="card-title">创建版本库</span>
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="函数参数中独立星号*的作用">
+                        
+                        <span class="card-title">函数参数中独立星号*的作用</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Git创建版本库
+                            python函数参数中独立星号*的作用
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-24
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-18
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Git/" class="post-category">
-                                    Git
+                            <a href="/categories/python/" class="post-category">
+                                    python
                                 </a>
                             
                             
@@ -809,8 +758,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Git%E5%88%9B%E5%BB%BA%E7%89%88%E6%9C%AC%E5%BA%93/">
-                        <span class="chip bg-color">Git创建版本库</span>
+                    <a href="/tags/python%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E4%B8%AD%E7%8B%AC%E7%AB%8B%E6%98%9F%E5%8F%B7-%E7%9A%84%E4%BD%9C%E7%94%A8/">
+                        <span class="chip bg-color">python函数参数中独立星号*的作用</span>
                     </a>
                     
                 </div>

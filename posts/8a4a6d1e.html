@@ -384,7 +384,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    642
+                    678
                 </div>
                 
 
@@ -422,40 +422,40 @@
 2. 创建SSH key。
     由于你的本地Git仓库和GitHub仓库之间的传输是通过SSH加密的。
     Windows下打开Git Bash，创建SSH key。
-    $ ssh-keygen -t rsa -C "youremail@example.com"
+    $ ssh-keygen -t rsa -C &quot;youremail@example.com&quot;
 
 3. 在用户主目录里找到.ssh目录，里面有id_rsa和id_rsa.pub两个文件（密钥对）。
     用户主目录：C:\Users\Administrator
 
-4. 登陆GitHub，打开"Account settings"，"SSH Keys"页面。
+4. 登陆GitHub，打开&quot;Account settings&quot;，&quot;SSH Keys&quot;页面。
 
-5. 点"Add SSH Key"，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容。</code></pre>
+5. 点&quot;Add SSH Key&quot;，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容。</code></pre>
 <p>​     </p>
 <h4><span id="本地库-关联-远程库">本地库 关联 远程库</span></h4><pre><code>origin:默认远程库名称</code></pre>
 <pre class="line-numbers language-none"><code class="language-none"># 在本地库当前分支
-    $ git remote add origin git@github.com:pythonde/newRepository.git
+    $ git remote add origin git@github.com:pythonde&#x2F;newRepository.git
 
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <h4><span id="上传数据到远程库">上传数据到远程库</span></h4><pre class="line-numbers language-none"><code class="language-none">$ git push -u origin dev
-The authenticity of host 'github.com (13.250.177.223)' can't be established.
+The authenticity of host &#39;github.com (13.250.177.223)&#39; can&#39;t be established.
 RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
-Are you sure you want to continue connecting (yes/no)? yes
+Are you sure you want to continue connecting (yes&#x2F;no)? yes
 
-Warning: Permanently added 'github.com,13.250.177.223' (RSA) to the list of known hosts.
-To github.com:pythonde/newRepository.git
+Warning: Permanently added &#39;github.com,13.250.177.223&#39; (RSA) to the list of known hosts.
+To github.com:pythonde&#x2F;newRepository.git
  ! [rejected]        master -&gt; master (fetch first)
-error: failed to push some refs to 'git@github.com:pythonde/newRepository.git'
+error: failed to push some refs to &#39;git@github.com:pythonde&#x2F;newRepository.git&#39;
 hint: Updates were rejected because the remote contains work that you do
 hint: not have locally. This is usually caused by another repository pushing
 hint: to the same ref. You may want to first integrate the remote changes
-hint: (e.g., 'git pull ...') before pushing again.
-hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+hint: (e.g., &#39;git pull ...&#39;) before pushing again.
+hint: See the &#39;Note about fast-forwards&#39; in &#39;git push --help&#39; for details.
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h4><span id="远程库更新本地库">远程库更新本地库</span></h4><pre class="line-numbers language-none"><code class="language-none">$ git pull --rebase origin dev
 
-From github.com:pythonde/newRepository
+From github.com:pythonde&#x2F;newRepository
  * branch            dev        -&gt; FETCH_HEAD
 First, rewinding head to replay your work on top of it...
 Applying: first add
@@ -468,12 +468,12 @@ Applying: test2 dev third
 
 Counting objects: 9, done.
 Delta compression using up to 4 threads.
-Compressing objects: 100% (7/7), done.
-Writing objects: 100% (9/9), 852 bytes | 852.00 KiB/s, done.
+Compressing objects: 100% (7&#x2F;7), done.
+Writing objects: 100% (9&#x2F;9), 852 bytes | 852.00 KiB&#x2F;s, done.
 Total 9 (delta 0), reused 0 (delta 0)
-To github.com:pythonde/newRepository.git
+To github.com:pythonde&#x2F;newRepository.git
    a69bffd..da7dd11  dev -&gt; dev
-Branch 'dev' set up to track remote branch 'dev' from 'origin'.
+Branch &#39;dev&#39; set up to track remote branch &#39;dev&#39; from &#39;origin&#39;.
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h4><span id="注意事项">注意事项</span></h4><pre><code>1. 远程操作git push / git pull 时，本地库和远程库分支名相同。
@@ -999,7 +999,7 @@ Branch 'dev' set up to track remote branch 'dev' from 'origin'.
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">17.1k</span>&nbsp;字
+                class="white-color">17.2k</span>&nbsp;字
             
             
             

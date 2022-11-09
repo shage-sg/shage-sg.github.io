@@ -479,18 +479,18 @@ v2 <span class="token operator">=</span> <span class="token punctuation">(</span
 <ul>
 <li>dict类型，<code>维护的free_list数组最多可以缓存80个对象</code>。</li>
 </ul>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">v1 <span class="token operator">=</span> <span class="token punctuation">{</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">v1 <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
     <span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"bobo"</span><span class="token punctuation">,</span>
     <span class="token string">"age"</span><span class="token punctuation">:</span> <span class="token string">"20"</span><span class="token punctuation">,</span>
-     <span class="token punctuation">}</span>
+     <span class="token punctuation">&#125;</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">id</span><span class="token punctuation">(</span>v1<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">#内存地址：2368673137864</span>
 
 <span class="token keyword">del</span> v1
 
-v2 <span class="token operator">=</span> <span class="token punctuation">{</span>
+v2 <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
     <span class="token string">'sex'</span><span class="token punctuation">:</span><span class="token string">'woman'</span><span class="token punctuation">,</span>
     <span class="token string">'hobby'</span><span class="token punctuation">:</span> <span class="token string">'demo'</span><span class="token punctuation">,</span>
-<span class="token punctuation">}</span>
+<span class="token punctuation">&#125;</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">id</span><span class="token punctuation">(</span>v2<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># 内存地址：2368673137864</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>等后续我会大家讲解python的垃圾回收机制和缓存机制的底层的C语言源码分析。</p>
 
@@ -1009,7 +1009,7 @@ v2 <span class="token operator">=</span> <span class="token punctuation">{</span
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">17.1k</span>&nbsp;字
+                class="white-color">17.2k</span>&nbsp;字
             
             
             

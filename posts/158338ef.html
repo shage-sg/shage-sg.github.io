@@ -384,7 +384,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    780
+                    792
                 </div>
                 
 
@@ -454,12 +454,12 @@ df <span class="token operator">=</span> pd<span class="token punctuation">.</sp
 <ol start="3">
 <li><p>通过传递一个能够被转换成类似序列结构的字典对象来创建一个<code>DataFrame</code>。</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># dict</span>
-df2 <span class="token operator">=</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">'A'</span><span class="token punctuation">:</span><span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span>
+df2 <span class="token operator">=</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span><span class="token punctuation">&#123;</span><span class="token string">'A'</span><span class="token punctuation">:</span><span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span>
                     <span class="token string">'B'</span><span class="token punctuation">:</span>pd<span class="token punctuation">.</span>Timestamp<span class="token punctuation">(</span><span class="token string">'20210226'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
                     <span class="token string">'C'</span><span class="token punctuation">:</span>pd<span class="token punctuation">.</span>Series<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span>index<span class="token operator">=</span><span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>dtype<span class="token operator">=</span><span class="token string">'float32'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
                     <span class="token string">'D'</span><span class="token punctuation">:</span>np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token operator">*</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
                     <span class="token string">'E'</span><span class="token punctuation">:</span>pd<span class="token punctuation">.</span>Categorical<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">"test"</span><span class="token punctuation">,</span><span class="token string">"train"</span><span class="token punctuation">,</span><span class="token string">"test"</span><span class="token punctuation">,</span><span class="token string">"train"</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-                    <span class="token string">'F'</span><span class="token punctuation">:</span><span class="token string">'foo'</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+                    <span class="token string">'F'</span><span class="token punctuation">:</span><span class="token string">'foo'</span><span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
 
 <span class="token comment"># 结果</span>
 
@@ -493,7 +493,7 @@ dtype<span class="token punctuation">:</span> <span class="token builtin">object
 
 <span class="token comment"># 结果</span>
 Categories <span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token builtin">object</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'b'</span><span class="token punctuation">,</span> <span class="token string">'c'</span><span class="token punctuation">,</span> <span class="token string">'d'</span><span class="token punctuation">,</span> <span class="token string">'e'</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>打印<code>ss</code>之后我们发现 <code>Categories (5, object): ['a', 'b', 'c', 'd', 'e']</code>把我们的重复值去掉了，原来有6个现在才有5个，那么其余的是不是不在了呢？</p>
+<p>打印<code>ss</code>之后我们发现 <code>Categories (5, object): [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;]</code>把我们的重复值去掉了，原来有6个现在才有5个，那么其余的是不是不在了呢？</p>
 <p>答案是：其余还在，只不过使用了另外一个表示方式！</p>
 <p>我们现在来查看一下他是什么数据类型</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span>ss<span class="token punctuation">.</span>dtype<span class="token punctuation">)</span>
@@ -1033,7 +1033,7 @@ Index<span class="token punctuation">(</span><span class="token punctuation">[</
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">17.1k</span>&nbsp;字
+                class="white-color">17.2k</span>&nbsp;字
             
             
             

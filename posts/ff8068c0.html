@@ -454,7 +454,7 @@
     temp <span class="token operator">=</span> li<span class="token punctuation">[</span>left<span class="token punctuation">]</span>
     <span class="token keyword">while</span> left <span class="token operator">&lt;</span> right<span class="token punctuation">:</span>
         <span class="token comment"># 从右边找比tmp小的数</span>
-        <span class="token keyword">while</span> left <span class="token operator">&lt;</span> right <span class="token keyword">and</span> li<span class="token punctuation">[</span>right<span class="token punctuation">]</span> <span class="token operator">&gt;=</span> temp<span class="token punctuation">:</span>
+        <span class="token keyword">while</span> left <span class="token operator">&lt;</span> right <span class="token keyword">and</span> li<span class="token punctuation">[</span>right<span class="token punctuation">]</span> <span class="token operator">>=</span> temp<span class="token punctuation">:</span>
             right <span class="token operator">-=</span> <span class="token number">1</span>
         <span class="token comment"># 如果右边的值比基准值小，则把右边的值写到左边的空位置上</span>
         li<span class="token punctuation">[</span>left<span class="token punctuation">]</span> <span class="token operator">=</span> li<span class="token punctuation">[</span>right<span class="token punctuation">]</span>
@@ -483,9 +483,9 @@
 <p>快速排序算法相对来说比较困难，直接把注释写到代码旁边了。</p>
 <p>大家注意到了没，为什么写了<code>_quick_sort</code>还要再写到quick_sort内执行，因为使用了装饰器，<code>_quick_sort</code>是一个递归函数，则装饰器会在每次函数调用时返回一个结果。我们是想求得整个排序耗费时间而不是每一趟的时间。如果数据量过小，需要提高装饰器的精度才能显示时间，否则只能显示0秒，排序速度太快哈哈哈。</p>
 <h2><span id="五-运行测试">五 . 运行测试</span></h2><pre class="line-numbers language-python" data-language="python"><code class="language-python">li <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">]</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"要排序的列表:{}"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"要排序的列表:&#123;&#125;"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span><span class="token punctuation">)</span>
 quick_sort<span class="token punctuation">(</span>li<span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"排序后的列表:{}"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"排序后的列表:&#123;&#125;"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span><span class="token punctuation">)</span>
 <span class="token comment"># 结果:</span>
 <span class="token comment"># 要排序的列表:[3, 4, 2, 1, 5, 6, 8, 9]</span>
 <span class="token comment"># 排序后的列表:[1, 2, 3, 4, 5, 6, 8, 9]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
@@ -1026,7 +1026,7 @@ quick_sort<span class="token punctuation">(</span>li<span class="token punctuati
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">17.1k</span>&nbsp;字
+                class="white-color">17.2k</span>&nbsp;字
             
             
             

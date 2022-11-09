@@ -345,8 +345,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E7%BC%93%E5%AD%98%E6%9C%BA%E5%88%B6/">
-                                <span class="chip bg-color">缓存机制</span>
+                            <a href="/tags/python%E5%9F%BA%E7%A1%80/">
+                                <span class="chip bg-color">python基础</span>
                             </a>
                         
                     </div>
@@ -377,7 +377,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-04-26
+                    2022-11-09
                 </div>
                 
 
@@ -449,27 +449,22 @@ v2 <span class="token operator">=</span> <span class="token number">38</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">id</span><span class="token punctuation">(</span>v1<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># 内存地址：2366548050416</span>
 <span class="token keyword">del</span> v1
 v1 <span class="token operator">=</span> <span class="token string">"A"</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">id</span><span class="token punctuation">(</span>v1<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># 内存地址：2366548050416</span>
-
- <span class="token comment"># 除此之外，Python内部还对字符串做了驻留机制，针对那么只含有字母、数字、下划线的字符串（见源码Objects/codeobject.c），如果内存中已存在则不会重新在创建而是使用原来的地址里（不会像free_list那样一直在内存存活，只有内存中有才能被重复利用）。</span>
-  v1 <span class="token operator">=</span> <span class="token string">"bob"</span>
-  v2 <span class="token operator">=</span> <span class="token string">"bobo"</span>
-  <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">id</span><span class="token punctuation">(</span>v1<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token builtin">id</span><span class="token punctuation">(</span>v2<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># 输出：True</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">id</span><span class="token punctuation">(</span>v1<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># 内存地址：2366548050416</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1><span id="除此之外python内部还对字符串做了驻留机制针对那么只含有字母-数字-下划线的字符串见源码objectscodeobjectc如果内存中已存在则不会重新在创建而是使用原来的地址里不会像free_list那样一直在内存存活只有内存中有才能被重复利用">除此之外，Python内部还对字符串做了驻留机制，针对那么只含有字母、数字、下划线的字符串（见源码Objects/codeobject.c），如果内存中已存在则不会重新在创建而是使用原来的地址里（不会像free_list那样一直在内存存活，只有内存中有才能被重复利用）。</span></h1><p>v1 = “bob”<br>v2 = “bobo”<br>print(id(v1) == id(v2)) # 输出：True</p>
+<pre class="line-numbers language-none"><code class="language-none">
 
 
+- list类型，&#96;维护的free_list数组对象最多可缓存80个对象。&#96;
+
+​&#96;&#96;&#96;python
+v1 &#x3D; [44,3,22]
+print(id(v1)) # 内存地址: 2368673178184
+
+del v1
+v2 &#x3D; [&quot;bo&quot;,&quot;bo&quot;]
+print(id(v2)) # 内存地址：2368673178184<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<li><p>tuple类型，<code>维护一个free_list数组且数组容量为20</code>，数组中元素可以是链表且每个链表最多可以容纳2000个元组对象。元组的free_list数组存在数据时，是按照元组可以容纳的个数为索引找到free_list数组中的对应链表，并添加到链表里。</p>
 </li>
-</ul>
-<ul>
-<li>list类型，<code>维护的free_list数组对象最多可缓存80个对象。</code></li>
-</ul>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">v1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">44</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">22</span><span class="token punctuation">]</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">id</span><span class="token punctuation">(</span>v1<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># 内存地址: 2368673178184</span>
-
-<span class="token keyword">del</span> v1
-v2 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"bo"</span><span class="token punctuation">,</span><span class="token string">"bo"</span><span class="token punctuation">]</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">id</span><span class="token punctuation">(</span>v2<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># 内存地址：2368673178184</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<ul>
-<li>tuple类型，<code>维护一个free_list数组且数组容量为20</code>，数组中元素可以是链表且每个链表最多可以容纳2000个元组对象。元组的free_list数组存在数据时，是按照元组可以容纳的个数为索引找到free_list数组中的对应链表，并添加到链表里。</li>
 </ul>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">v1 <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span> <span class="token builtin">id</span><span class="token punctuation">(</span>v1<span class="token punctuation">)</span> <span class="token punctuation">)</span> <span class="token comment"># 内存地址：2366550259680</span>
@@ -557,8 +552,8 @@ v2 <span class="token operator">=</span> <span class="token punctuation">&#123;<
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E7%BC%93%E5%AD%98%E6%9C%BA%E5%88%B6/">
-                                    <span class="chip bg-color">缓存机制</span>
+                                <a href="/tags/python%E5%9F%BA%E7%A1%80/">
+                                    <span class="chip bg-color">python基础</span>
                                 </a>
                             
                         </div>
@@ -768,8 +763,8 @@ v2 <span class="token operator">=</span> <span class="token punctuation">&#123;<
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/python%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E4%B8%AD%E7%8B%AC%E7%AB%8B%E6%98%9F%E5%8F%B7-%E7%9A%84%E4%BD%9C%E7%94%A8/">
-                        <span class="chip bg-color">python函数参数中独立星号*的作用</span>
+                    <a href="/tags/python%E5%9F%BA%E7%A1%80/">
+                        <span class="chip bg-color">python基础</span>
                     </a>
                     
                 </div>
@@ -817,8 +812,8 @@ v2 <span class="token operator">=</span> <span class="token punctuation">&#123;<
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E6%9C%BA%E5%88%B6/">
-                        <span class="chip bg-color">垃圾回收机制</span>
+                    <a href="/tags/python%E5%9F%BA%E7%A1%80/">
+                        <span class="chip bg-color">python基础</span>
                     </a>
                     
                 </div>
@@ -1009,7 +1004,7 @@ v2 <span class="token operator">=</span> <span class="token punctuation">&#123;<
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">17.2k</span>&nbsp;字
+                class="white-color">15.8k</span>&nbsp;字
             
             
             
